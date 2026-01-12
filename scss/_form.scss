@@ -1,0 +1,85 @@
+/*! @group Form Feedback */
+/* ========================================================================== */
+.form-feedback {
+	position: fixed;
+	margin-left: -234px;
+	z-index: 9900;
+}
+
+.form-custom {
+	
+	input.num_short {
+		width: 10%;
+		float: left;
+		margin-right: 2%;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	
+	input.num_half {
+		width: 30%;
+		float: left;
+		margin-right: 2%;
+		text-align: center;
+	}
+	
+	label {
+		width: 88%;
+		height: 34px;
+		padding: 6px 0 4px;
+		float: left;
+	}
+	
+	.span-feed_num_short {
+		width: 88%;
+		min-height: 34px;
+		padding: 6px 0 4px;
+		float: left;
+	}
+	
+	.span-feed_num_half {
+		width: 68%;
+		min-height: 34px;
+		padding: 6px 0 4px;
+		float: left;
+	}
+}
+
+.buttons-group {
+	border-top: $border;
+	padding-top: 20px;
+}
+
+.enter-num-auto {
+	height: 30px;
+	width: 50px;
+	min-width: 40px;
+	//background-color: $third-dark;
+	border: $border;
+	font-family: $heading-font-family-bold;
+	font-size: $font-size-h4;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	padding: 3px 5px 4px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+	@include border-top-radius(5px);
+	@include border-bottom-radius(5px);
+}
+
+.enter-num-auto-empty {
+	height: 30px;
+	width: 20px;
+	font-family: $heading-font-family-bold;
+	font-size: $font-size-h4;
+	margin-right: 0;
+	margin-left: -5px;
+	margin-bottom: 10px;
+	padding: 5px 5px 4px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+}
+/* @end  */

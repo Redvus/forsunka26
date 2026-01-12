@@ -1,0 +1,412 @@
+/*! @group Registration */
+/* ========================================================================== */
+.register-ready {
+	padding-left: 36px;
+
+	a {
+		font-weight: bold;
+	}
+}
+
+legend {
+	font: {
+		family: $heading-font-family !important;
+		size: $font-size-h3;
+		weight: normal  !important;
+	};
+	color: $primary !important;
+
+	h3 {
+		margin-bottom: 0;
+	}
+}
+
+.form-horizontal {
+	//margin-top: 15px;
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="password"],
+	textarea {
+		background-color: $third-light;
+		display: inline-block;
+		padding: 10px;
+		outline: none;
+		color: $primary;
+		@include transition(0.25s);
+
+		&:focus {
+			background-color: #fff;
+			border: $border-dark;
+		}
+
+		&:focus::-webkit-input-placeholder {
+			color: transparent;
+			@include transition(0.25s);
+		}
+
+		&:focus::-moz-placeholder {
+			color: transparent;
+			@include transition(0.25s);
+		}
+
+		&:focus:-ms-input-placeholder {
+			color: transparent;
+			@include transition(0.25s);
+		}
+
+		&::-webkit-input-placeholder { /* WebKit browsers */
+		    color: lighten($secondary, 10%);
+		}
+		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color: $input-color-placeholder;
+		   opacity:  1;
+		}
+		&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color: $input-color-placeholder;
+		   opacity:  1;
+		}
+		&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		   color: $input-color-placeholder;
+		}
+	}
+
+	.register-business {
+
+		.radio {
+			//height: 34px;
+			display: block;
+			padding-top: 0;
+			margin: 0 auto 7px;
+			//padding: 6px 0 4px;
+
+			label {
+				font: {
+					family: $heading-font-family !important;
+					size: $font-size-h4;
+					weight: normal  !important;
+				}
+				color: $primary;
+			}
+
+			input[type="radio"] {
+				margin-top: 2px;
+			}
+		}
+	}
+
+	.control-label {
+		text-align: left;
+		padding-top: 0;
+		margin-bottom: 5px;
+	}
+}
+
+.text-danger {
+	font-size: $font-size-small;
+}
+
+.register-block {
+
+	h3 {
+		margin-left: 10px;
+	}
+
+	.register-button {
+		margin-top: 15px;
+
+		button {
+			width: 100%;
+			height: 35px;
+			float: right;
+			background-color: $primary;
+			border: none;
+			color: $third;
+			font: {
+				family: $heading-font-family;
+				size: $font-size-base;
+			}
+			border-radius: $border-radius-base;
+			@include transition(0.25s);
+			cursor: pointer;
+
+			&:hover {
+				background-color: darken($primary, 10%);
+				border-radius: $border-radius-large;
+			}
+		}
+	}
+}
+
+fieldset {
+	margin-bottom: 15px;
+}
+
+.register-submit {
+	margin-top: 15px;
+
+	.register-button {
+		//width: 30%;
+		height: 35px;
+		background-color: $primary;
+		background-image: none;
+		border: none;
+		color: $third;
+		padding: 6px 15px 4px;
+		margin-top: 20px;
+		font: {
+			family: $heading-font-family;
+			size: $font-size-base;
+		}
+		border-radius: $border-radius-base;
+		@include transition(0.25s);
+		cursor: pointer;
+
+		&:hover {
+			background-color: darken($primary, 10%);
+			border-radius: $border-radius-large;
+		}
+	}
+
+	input[type=checkbox] {
+		margin-right: 5px;
+	}
+
+	a {
+		font-weight: bold;
+	}
+}
+
+.form-block {
+
+	h3 {
+		margin-left: 10px;
+	}
+
+	label, p {
+		font-size: $font-size-small;
+	}
+
+	.register-button {
+		margin-top: 30px;
+
+		button {
+			width: 100%;
+			height: 35px;
+			float: right;
+			background-color: $primary;
+			border: none;
+			color: $third;
+			font: {
+				family: $heading-font-family;
+				size: $font-size-base;
+			}
+			border-radius: $border-radius-base;
+			@include transition(0.25s);
+			cursor: pointer;
+
+			&:hover {
+				background-color: darken($primary, 10%);
+				border-radius: $border-radius-large;
+			}
+		}
+	}
+
+	.checkbox-block {
+
+
+		.checkbox {
+
+			input[type="checkbox"] {
+				margin-top: 2px;
+			}
+
+			label {
+				@include transition(0.25s);
+
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+	}
+
+	.form-data {
+
+		.form-control {
+			border: 1px solid $third-dark;
+			color: $primary;
+			border-radius: $border-radius-base;
+			//@include box-shadow(none);
+			@include transition(0.25s);
+
+			&:focus {
+				border: $border-dark;
+				background-color: $third-light;
+				border-radius: $border-radius-large;
+			}
+
+			&:focus::-webkit-input-placeholder {
+				opacity: 0.3;
+				@include transition(0.25s);
+			}
+
+			&:focus::-moz-placeholder {
+				opacity: 0.3;
+				@include transition(0.25s);
+			}
+
+			&:focus:-ms-input-placeholder {
+				opacity: 0.3;
+				@include transition(0.25s);
+			}
+
+			&::-webkit-input-placeholder { /* WebKit browsers */
+				color: $secondary;
+			}
+			&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+				color: $third-darker;
+			}
+			&::-moz-placeholder { /* Mozilla Firefox 19+ */
+				color: $third-darker;
+			}
+			&:-ms-input-placeholder { /* Internet Explorer 10+ */
+				color: $third-darker;
+			}
+		}
+
+		.form-description {
+			min-height: 132px;
+			padding: 15px;
+			display: table;
+			background-color: $third;
+			border-radius: $border-radius-base;
+
+			p {
+				display: table-cell;
+				vertical-align: middle;
+				height: 102px;
+			}
+		}
+	}
+
+	.adress-data {
+
+	}
+}
+
+/* @end  */
+
+/*! @group Login */
+/* ========================================================================== */
+.login-new {
+
+	.well {
+		min-height: 292px;
+		border-radius: $border-radius-large;
+
+		h2 {
+			margin-top: 0;
+		}
+
+		.login-button {
+			//width: 100%;
+			height: 35px;
+			background-color: $primary;
+			margin-top: 10px;
+			padding: 8px 15px 6px;
+			border: none;
+			color: $third;
+			font: {
+				family: $heading-font-family;
+				size: $font-size-base;
+			}
+			border-radius: $border-radius-base;
+			@include transition(0.25s);
+			cursor: pointer;
+
+			&:hover {
+				background-color: darken($primary, 10%);
+				border-radius: $border-radius-large;
+			}
+		}
+	}
+}
+
+.login-register {
+	@extend .login-new;
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="password"] {
+		background-color: $third-light;
+		display: inline-block;
+		padding: 10px;
+		outline: none;
+		color: $primary;
+		@include transition(0.25s);
+
+		&:focus {
+			background-color: #fff;
+			border: $border-dark;
+		}
+
+		&:focus::-webkit-input-placeholder {
+			color: transparent;
+			@include transition(0.25s);
+		}
+
+		&:focus::-moz-placeholder {
+			color: transparent;
+			@include transition(0.25s);
+		}
+
+		&:focus:-ms-input-placeholder {
+			color: transparent;
+			@include transition(0.25s);
+		}
+
+		&::-webkit-input-placeholder { /* WebKit browsers */
+		    color: lighten($secondary, 10%);
+		}
+		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color: $input-color-placeholder;
+		   opacity:  1;
+		}
+		&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color: $input-color-placeholder;
+		   opacity:  1;
+		}
+		&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		   color: $input-color-placeholder;
+		}
+	}
+
+	#input-password {
+		margin-bottom: 22px;
+	}
+
+	.login-button {
+		height: 35px;
+		background-color: $primary;
+		margin-top: 0 !important;
+		padding: 8px 15px 6px;
+		border: none;
+		color: $third;
+		font: {
+			family: $heading-font-family;
+			size: $font-size-base;
+		}
+		border-radius: $border-radius-base;
+		@include transition(0.25s);
+		cursor: pointer;
+
+		&:hover {
+			background-color: darken($primary, 10%);
+			border-radius: $border-radius-large;
+		}
+	}
+}
+/* @end  */

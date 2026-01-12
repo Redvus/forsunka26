@@ -1,0 +1,393 @@
+/*
+ * YO Menu v1.0.6
+ * for OpenCart 2
+ * Copyright 2015, iDiY
+ * Contact: info@idiy.club
+ */
+
+/*! @group Custom colors for YO-menu */
+/* ========================================================================== */
+$primary:		#002E6F !default;
+$secondary:		#0053A4 !default;
+$third:			lighten($secondary, 45%) !default;
+$fourth:		#002e6f !default;
+
+$third-dark:	darken($third, 3%) !default;
+$third-darker:	darken($third, 5%) !default;
+$third-light:	lighten($third, 5%) !default;
+
+$border:			1px solid $third-dark !default;
+$border-light:		1px solid lighten($secondary, 10%) !default;
+$border-dark:		1px solid $secondary !default;
+
+
+/*! @group Boreder radius */
+/* ========================================================================== */
+$border-radius-base:        5px !default;
+$border-radius-large:       10px !default;
+$border-radius-small:       3px !default;
+/* @end  */
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+/*! @group Fonts */
+/* ========================================================================== */
+$font-size-base:          12px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+/* @end  */
+
+/*  Start Default Style  */
+.box {
+    margin-bottom: 12px;
+}
+
+.box-heading {
+    position: relative;
+    padding: 6px 5px 6px 8px;
+    border-radius: $border-radius-base;
+    border: 1px solid $third-dark;
+    color: $primary;
+
+    cursor: pointer;
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+
+    i.fa.fa-bars {
+	    //float: right;
+	    line-height: 20px;
+	    margin-right: 6px;
+	}
+
+	&.am-open {
+	    color: $primary;
+	    //text-shadow: 0 1px 0 #FFF;
+	    background-color: $third-light;
+	    border-bottom-left-radius: 0;
+	    border-bottom-right-radius: 0;
+	    border-bottom-color: transparent;
+	}
+
+	&.am-close{
+	    background-color: $third-light;
+	}
+
+	+ .box-content {
+	    border-top-left-radius: 0;
+	    border-top-right-radius: 0;
+	}
+}
+
+div.box-heading {
+	font-size: $font-size-base;
+	border-bottom-left-radius: $border-radius-base;
+	border-bottom-right-radius: $border-radius-base;
+}
+
+.box-content {
+    border: 1px solid $third-dark;
+    border-bottom: none;
+    border-radius: $border-radius-base;
+
+    ul.yo-am {
+		border-bottom-left-radius: $border-radius-base;
+		border-bottom-right-radius: $border-radius-base;
+
+	    li {
+		    line-height: 20px;
+		    margin: 0;
+		    padding: 0;
+		    border: none;
+			background: transparent;
+
+			&.am-item-open {
+				border-bottom-left-radius: $border-radius-base;
+				border-bottom-right-radius: $border-radius-base;
+			}
+
+		    // &:last-child {
+			// 	// border-bottom-left-radius: $border-radius-base;
+			// 	// border-bottom-right-radius: $border-radius-base;
+
+			//     a {
+			// 		border-bottom-left-radius: $border-radius-base;
+			// 		border-bottom-right-radius: $border-radius-base;
+			//     }
+		    // }
+		}
+
+		&+li,.box-content ul.yo-am li li {
+			border-top: 1px solid $third-dark;
+
+			&:first-child {
+				border-bottom-left-radius: $border-radius-base;
+				border-bottom-right-radius: $border-radius-base;
+
+				a {
+					border-bottom-left-radius: $border-radius-base;
+					border-bottom-right-radius: $border-radius-base;
+				}
+			}
+		}
+
+		a {
+		    font-size: 12px;
+		    line-height: 14px;
+		    padding: 6px 5px 8px 8px;
+		    color: $primary;
+		    text-decoration: none;
+		    //text-shadow: 0 1px 0 #FFF;
+		    background-color: #FFF;
+			border-bottom: 1px solid $third-dark;
+
+		    -webkit-transition: all .2s;
+		       -moz-transition: all .2s;
+		        -ms-transition: all .2s;
+		         -o-transition: all .2s;
+		            transition: all .2s;
+
+		    &:hover {
+			    color: $primary;
+			    background-color: $third-light;
+			}
+
+			&.active {
+			    color: $primary;
+			/*     font-weight: bold; */
+			}
+		}
+    }
+}
+/*  End Default Style  */
+
+ul.yo-am {
+	width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+	ul {
+	    width: 100%;
+	    margin: 0;
+	    padding: 0;
+	    display: none;
+
+	    list-style: none;
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;
+	}
+
+	li {
+	    position: relative;
+	    display: block;
+	    float: none;
+
+	    a {
+		    position: relative;
+		    display: block;
+		    overflow: hidden;
+		    cursor: pointer;
+		    border: none;
+		    outline: none;
+
+		    &.am-item {
+			    padding-right: 2.6em;
+
+			    &:hover + a.am-tb {
+				    -webkit-box-shadow: -1px 1px 0 0 rgba(0,0,0,.05);
+				       -moz-box-shadow: -1px 1px 0 0 rgba(0,0,0,.05);
+				            box-shadow: -1px 1px 0 0 rgba(0,0,0,.05);
+				}
+			}
+
+			span {
+			    position: relative;
+			    vertical-align: middle;
+
+			    &.am-badge {
+				    font-size: 85%;
+				    color: #444;
+				    margin-left: .4em;
+				    padding: 2px 6px;
+				    text-align: center;
+				    font-weight: bold;
+				    background-color: #f5f5f5;
+
+				    -webkit-border-radius: 2px;
+				       -moz-border-radius: 2px;
+				            border-radius: 2px;
+				}
+
+				&.am-tb {
+				    position: absolute;
+				    top: 0;
+				    right: 0;
+				    margin: 0;
+				    padding-left: 14px;
+				    padding-right: 14px;
+				    color: #BBB;
+
+				    -webkit-box-shadow: none;
+				       -moz-box-shadow: none;
+				            box-shadow: none;
+
+				    &:hover {
+					    -webkit-box-shadow: -1px 1px 0 0 rgba(0,0,0,.05);
+					       -moz-box-shadow: -1px 1px 0 0 rgba(0,0,0,.05);
+					            box-shadow: -1px 1px 0 0 rgba(0,0,0,.05);
+					}
+
+					span {
+
+						&:before {
+						    font-family: FontAwesome;
+						    content: "\f067";
+						    font-size: 10px;
+						}
+					}
+				}
+
+				&.am-image {
+				    padding: 3px !important;
+					text-align: center;
+				}
+			}
+
+			&.am-parent span.am-arrow:after {
+			    font-family: FontAwesome;
+			    content: "\f105";
+			    float: right;
+			    margin-right: 2px;
+			}
+
+			img.am-icon + span {
+			    display: inline;
+			}
+		}
+
+		&.am-item-open {
+
+			> a.am-parent {
+				background-color: $third-dark;
+				//font-weight: bold;
+				line-height: 14px;
+
+				span.am-arrow:after {
+				    content: "\f107";
+				    margin-right: 1px;
+				}
+			}
+
+			> a.am-tb span:before {
+			    content: "\f068";
+			}
+
+			li {
+				a.active {
+					background-color: $third-dark;
+					font-weight: bold;
+				}
+			}
+		}
+
+		&.active {
+
+			> ul {
+			    display: block;
+			}
+
+			> a {
+				background-color: $third-dark;
+				font-weight: bold;
+			}
+		}
+
+		&.am-image > a {
+		    padding: 3px !important;
+			text-align: center;
+		}
+
+		li {
+
+			a:first-child {
+			   padding-left: 1.5em;
+			}
+
+			// a:last-child {
+			// 	border-bottom-left-radius: $border-radius-base;
+			// 	border-bottom-right-radius: $border-radius-base;
+			// }
+
+			li {
+
+				a:first-child {
+					padding-left: 2.5em;
+				}
+
+				li {
+
+					a:first-child {
+					    padding-left: 3.5em;
+					}
+
+					li a:first-child {
+					    padding-left: 4.5em;
+					}
+				}
+			}
+		}
+	}
+
+	.am-price {
+	    font-size: 85%;
+
+	    float: right;
+	    color: #444;
+
+	    margin-left: .4em;
+	    padding: 0 .6em;
+
+	    text-align: center;
+
+	    -webkit-border-radius: 4px;
+	       -moz-border-radius: 4px;
+	            border-radius: 4px;
+	    background-color: #F5F5F5;
+	}
+
+	img {
+		overflow: hidden;
+		max-width: 100% !important;
+		height: auto;
+		vertical-align: middle;
+		border: 0;
+
+		&.am-icon {
+		    margin-right: .7em;
+		}
+	}
+}

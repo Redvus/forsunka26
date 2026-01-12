@@ -1,0 +1,540 @@
+/*! @group Header */
+/* ========================================================================== */
+.header {
+	height: 45px;
+	background-color: $secondary;
+	//border-top: 1px solid $third;
+	//border-bottom: 1px solid $third;
+	//padding: 5px 0px 0 0;
+	margin: 0 0 80px 0;
+	top: 0;
+	font-size: $font-size-small;
+	line-height: $font-size-small;
+
+	.registration {
+		height: 30px;
+		margin-bottom: 0;
+		//padding-left: 24px;
+
+		li {
+			height: 30px;
+			padding: 8px 6px;
+			color: #fff;
+
+			a {
+				padding: 8px 6px;
+				font-size: $font-size-small;
+				color: #fff;
+				@include transition(0.25s);
+			}
+
+			&:hover {
+				background-color: darken($secondary, 5%);
+				color: $third;
+			}
+
+			&.header-phone {
+				margin-left: 12px;
+
+				&:hover {
+					background: none;
+					color: #fff;
+				}
+			}
+
+			&.header-worktime {
+				&:hover {
+					background: none;
+					color: #fff;
+				}
+			}
+
+			&.open {
+				background-color: darken($secondary, 5%);
+				color: $third;
+
+				> a {
+					background-color: transparent;
+				}
+			}
+
+			ul {
+				min-width: 142px;
+				background-color: $third;
+				margin-top: 0;
+				margin-right: 0;
+				border: 1px solid $third-dark;
+				border-top: none;
+				@include border-top-radius(0);
+				@include border-bottom-radius(10px);
+				@include animation-duration(0.5s);
+				@include animation-fill-mode(both);
+				@include animation-name(fadeIn);
+
+				li {
+					height: 25px;
+					padding: 4px 6px 2px;
+					text-align: right;
+
+					a {
+						height: 25px;
+						padding: 0 6px 3px;
+						color: $primary;
+						width: 100%;
+
+						&:hover {
+							background-color: transparent;
+						}
+					}
+
+					&:hover {
+						color: $secondary;
+						background-color: $third-dark;
+					}
+				}
+			}
+		}
+	}
+
+	.phone-block-sm {
+		margin-top: 15px;
+		text-align: right;
+		padding-right: 25px;
+
+		h5 {
+			margin: 0;
+
+			&:before {
+				@include content-symbol('\f095', $font-size-base, $primary);
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.menu-shop {
+
+
+		ul {
+			font-size: $font-size-small;
+			color: $primary;
+			float: right;
+			text-align: right;
+			margin-top: 5px;
+
+			li {
+				list-style: none;
+				display: inline-block;
+				margin-left: 10px;
+			}
+		}
+	}
+
+
+	.title-block {
+
+		.title-up {
+			padding-left: 10px;
+		}
+
+		.breadcrumbs {
+			height: 63px;
+			font-size: $font-size-small;
+			color: $primary;
+			display: table;
+
+			p {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: right;
+			}
+		}
+	}
+
+	&-ny {
+		width: 100%;
+		height: 50px;
+		// background-color: $secondary;
+		background: url('../image/top_line_holiday_4.png');
+		background-size: contain;
+		background-repeat: repeat-x;
+		// background-color: #FFDA64;
+		position: absolute;
+		margin: 20px 0 15px 0;
+		top: 0;
+		left: 0;
+		font-size: $font-size-small;
+		line-height: $font-size-small;
+		pointer-events: none;
+	}
+}
+
+.header_fixed {
+	width: 100%;
+	background-color: $secondary;
+	position: fixed;
+	z-index: 9000;
+	@include box-shadow(0 8px 30px rgba(61, 123, 158, 0.35));
+	@include transition(0.25s);
+	@include animation-duration(0.5s);
+
+	.registration {
+		height: 30px;
+		margin-bottom: 0;
+		//padding-left: 24px;
+
+		li {
+			height: 30px;
+			padding: 8px 6px;
+			color: #fff;
+
+			a {
+				padding: 8px 6px;
+				font-size: $font-size-small;
+				color: #fff;
+				@include transition(0.25s);
+			}
+
+			&:hover {
+				background-color: darken($secondary, 5%);
+				color: $third;
+			}
+
+			&.open {
+				background-color: darken($secondary, 5%);
+				color: $third;
+
+				> a {
+					background-color: transparent;
+				}
+			}
+
+			ul {
+				min-width: 142px;
+				background-color: $third;
+				margin-top: 0;
+				margin-right: 0;
+				border: 1px solid $third-dark;
+				border-top: none;
+				@include border-top-radius(0);
+				@include border-bottom-radius(10px);
+				@include animation-duration(0.5s);
+				@include animation-fill-mode(both);
+				@include animation-name(fadeIn);
+
+				li {
+					height: 25px;
+					padding: 4px 0 2px;
+					text-align: right;
+
+					a {
+						height: 25px;
+						padding: 0 6px 3px;
+						color: $primary;
+						width: 100%;
+
+						&:hover {
+							background-color: transparent;
+						}
+					}
+
+					&:hover {
+						color: $secondary;
+						background-color: $third-dark;
+					}
+				}
+			}
+		}
+	}
+
+	.phone-block-sm {
+		margin-top: 15px;
+		text-align: right;
+		padding-right: 25px;
+
+		h5 {
+			margin: 0;
+
+			&:before {
+				@include content-symbol('\f095', $font-size-base, $primary);
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.menu-shop {
+
+
+		ul {
+			font-size: $font-size-small;
+			color: $primary;
+			float: right;
+			text-align: right;
+			margin-top: 5px;
+
+			li {
+				list-style: none;
+				display: inline-block;
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.title-block {
+
+		.title-up {
+			padding-left: 10px;
+		}
+
+		.breadcrumbs {
+			height: 63px;
+			font-size: $font-size-small;
+			color: $primary;
+			display: table;
+
+			p {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: right;
+			}
+		}
+	}
+}
+
+header {
+	z-index: 9000;
+
+	.logo-home {
+		min-width: 110px;
+		margin: -113px 0 15px 0;
+		//width: 190px;
+
+		img {
+			width: 100%;
+			height: auto;
+			@include img-responsive();
+		}
+	}
+}
+
+.alert-success,
+.alert-danger,
+.alert-warning {
+	position: absolute;
+	top: 0;
+	z-index: 9000;
+	@include border-top-radius(0);
+	@include animation-duration(0.5s);
+	@include animation-fill-mode(both);
+	@include animation-name(fadeIn);
+
+	&.home-alert {
+		margin-left: -15px;
+	}
+
+	&.home-success {
+		margin-left: 0;
+	}
+}
+
+.alert-holiday {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 42px;
+	display: block;
+	z-index: 9000;
+	padding: 8px;
+	margin: 0 auto;
+	//background-color: $brand-warning;
+	background: url('../image/top_line_holiday_2.png');
+	background-size: contain;
+	background-repeat: repeat-x;
+	@include border-top-radius(0);
+	//@include animation-duration(0.5s);
+	//@include animation-fill-mode(both);
+	//@include animation-name(fadeInDown);
+	@include transition(0.5s);
+
+	p {
+		text-align: center;
+		margin: 0 auto;
+		padding: 0;
+		color: #fff;
+	}
+}
+
+.command-line {
+
+	input[type="text"] {
+		background-color: $third-light;
+		border-radius: $border-radius-base;
+		height: 34px;
+		width: 100%;
+		display: inline-block;
+		float: left;
+		padding: 0 12px;
+		outline: none;
+		border: $border-light;
+		font-size: $font-size-base;
+		color: $primary;
+		@include transition(0.25s);
+		@include border-left-radius(10px);
+
+		&:focus {
+			background-color: #fff;
+			border: $border-dark;
+		}
+
+		&:focus::-webkit-input-placeholder {
+			color: transparent;
+			@include transition(0.25s);
+		}
+
+		&:focus::-moz-placeholder {
+			color: transparent;
+			@include transition(0.25s);
+		}
+
+		&:focus:-ms-input-placeholder {
+			color: transparent;
+			@include transition(0.25s);
+		}
+
+		&::-webkit-input-placeholder { /* WebKit browsers */
+		    color: lighten($secondary, 10%);
+		}
+		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color: $input-color-placeholder;
+		   opacity:  1;
+		}
+		&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color: $input-color-placeholder;
+		   opacity:  1;
+		}
+		&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		   color: $input-color-placeholder;
+		}
+	}
+
+	#search {
+
+		.btn-lg {
+			font-size: $font-size-base;
+			line-height: $font-size-large;
+			padding: 6px 20px 4px;
+			text-shadow: 0 1px 0 #FFF;
+			color: $primary;
+			background-color: $third-dark;
+			border: $border-light;
+			@include transition(0.2s);
+
+			&:hover {
+				background-color: $third-darker;
+				border: $border-dark;
+			}
+		}
+	}
+
+	#cart {
+		margin-bottom: 10px;
+		@include transition(0.2s);
+
+		> .btn {
+			font-size: $font-size-base;
+			line-height: 18px;
+			border: $border-light;
+			background-color: $third-light;
+			padding: 6px 5px 4px;
+			color: $primary;
+			@include transition(0.25s);
+
+			&:hover {
+				background-color: $third;
+				border-color: $border-dark;
+				//@include border-top-radius(15px);
+				//@include border-bottom-radius(15px);
+			}
+		}
+
+		&.open > .btn {
+			background-color: $third;
+			border: $border-dark;
+			@include border-bottom-radius(0);
+			box-shadow: none;
+			text-shadow: none;
+		}
+
+		.dropdown-menu {
+			min-height: 20px;
+			min-width: 100%;
+			background-color: #fff;
+			//margin-top: 0;
+			z-index: 1001;
+			border: $border-dark;
+			@include border-top-radius(0);
+			@include border-bottom-radius(10px);
+			@include animation-duration(0.5s);
+			@include animation-fill-mode(both);
+			@include animation-name(fadeIn);
+
+			li {
+				font-size: $font-size-small;
+
+				p {
+					margin: 20px 0;
+					color: $primary;
+				}
+
+				> div {
+					min-width: 427px;
+					padding: 0 10px;
+				}
+			}
+
+			.table-striped>tbody>tr:nth-of-type(odd) {
+				background-color: $third-light;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+#top #currency .currency-select {
+	text-align: left;
+}
+#top #currency .currency-select:hover {
+	text-shadow: none;
+	color: #ffffff;
+	background-color: #229ac8;
+	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
+	background-repeat: repeat-x;
+}
+
+/* @end  */
