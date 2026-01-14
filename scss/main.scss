@@ -1,18 +1,19 @@
 @use "breakpoints";
 @use "colors";
 @use "fonts";
-// @use "variables";
+@use "variables";
 
-// @use "all_varia bles";
+@use "header";
+@use "footer";
+@use "layout";
+
 // @use "forsunka_mixins";
 // @use "forsunka_bootstrap";
 // @use "magnific-popup";
-// @use "layout";
-@use "header";
-// // @use "header_ny2";
+// @use "header_ny2";
 // @use "sidebar";
 // @use "utility";
-// //@use "nav";
+// @use "nav";
 // @use "content";
 // @use "register";
 // @use "product";
