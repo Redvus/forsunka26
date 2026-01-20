@@ -40,7 +40,9 @@ $colors: (
         --#{$name}-lighten-50: #{color.adjust($color, $lightness: 50%)};
         --#{$name}-lighten-60: #{color.adjust($color, $lightness: 60%)};
         --#{$name}-lighten-70: #{color.adjust($color, $lightness: 70%)};
+        --#{$name}-lighten-75: #{color.adjust($color, $lightness: 75%)};
         --#{$name}-lighten-85: #{color.adjust($color, $lightness: 85%)};
+        --#{$name}-lighten-95: #{color.adjust($color, $lightness: 95%)};
     }
 }
 
@@ -51,7 +53,8 @@ $colors: (
 =====================================*/
 
 :root {
-    --layoutBackground: var(--fourth);
+    // --layoutBackground: var(--fourth);
+    --layoutBackground: var(--third-lighten-95);
     --elementBackground: var(--fourth);
 
     --error: var(--third);

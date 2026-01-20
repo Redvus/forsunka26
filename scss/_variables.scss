@@ -15,6 +15,30 @@
     --wrapperWidth: 75rem; // 1200px
 
     --headerTopHeight: calc(var(--marginVert) * 2);
+
+    /*==============================
+    =            Header            =
+    ==============================*/
+    --headerBottomHeight: calc(var(--headerTopHeight) * 0.9);
+
+    --headerDropdownTop: var(--headerTopHeight);
+
+    --headerBottomSearchHeight: 100%;
+
+    /*=====  End of Header  ======*/
+
+    /*==============================
+    =            Layout            =
+    ==============================*/
+
+    /*=====  End of Layout  ======*/
+
+    /*==============================
+    =            Sidebar            =
+    ==============================*/
+    --sidebarActionHeight: 20vmin;
+
+    /*=====  End of Sidebar  ======*/
 }
 
 @include bp.media-up("XXLarge") {
@@ -37,23 +61,6 @@
         --headerTopHeight: calc(var(--marginVert) * 2); // 2rem
     }
 }
-
-/*==============================
-=            Header            =
-==============================*/
-$headerBottomHeight: calc(var(--headerTopHeight) * 2);
-
-$headerDropdownTop: var(--headerTopHeight);
-
-$headerBottomSearchHeight: var(--headerTopHeight);
-
-/*=====  End of Header  ======*/
-
-/*==============================
-=            Layout            =
-==============================*/
-
-/*=====  End of Layout  ======*/
 
 %px {
     font: {

@@ -17,6 +17,8 @@
         // font-size: var(--font-size-small);
         line-height: var(--font-size-small);
         color: var(--fourth);
+        position: static;
+        z-index: 1000;
 
         &__block {
             width: calc(100% / 3);
@@ -71,12 +73,14 @@
 
     &-bottom {
         width: 100%;
-        height: $headerBottomHeight;
+        height: var(--headerBottomHeight);
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
-        padding: calc(var(--marginVert) * 1.5) 0;
+        padding: calc(var(--marginVert) * 0.5) 0 calc(var(--marginVert) * 0.5);
+        position: static;
+        z-index: 1000;
 
         &--row {
             &-top {
@@ -89,16 +93,113 @@
             top: calc(#{var(--headerTopHeight)} + (var(--marginVert) / 2));
             left: 50%;
             transform: translateX(-50%);
+            z-index: 1000;
         }
 
         &__search {
-            width: calc(100% / 3);
-            height: $headerBottomSearchHeight;
+            // width: calc(100% / 3);
+            height: var(--headerBottomSearchHeight);
             display: block;
 
             &_input {
                 width: 100%;
                 height: 100%;
+                display: flex;
+                flex-direction: row;
+
+                input {
+                    width: calc(
+                        (var(--wrapperWidth) / 4) - (var(--marginVert) * 3) -
+                            (
+                                (var(--marginVert) * 1.5) -
+                                    (var(--border_thin) * 2)
+                            )
+                    );
+                    // height: calc(100% - ((var(--marginVert) / 3) * 2));
+                    display: block;
+                    // padding: calc(var(--marginVert) / 2) (var(--marginVert) / 3);
+                    padding: 0 calc(var(--marginVert) / 2);
+                    border: var(--border_thin) solid var(--secondary);
+                }
+
+                button {
+                    width: calc(var(--marginVert) * 3);
+                    height: 100%;
+                    border: none;
+                    border-radius: 0;
+                    outline: none;
+                    color: var(--fourth);
+                    background-color: var(--secondary);
+                }
+            }
+        }
+
+        &__cart {
+            height: var(--headerBottomSearchHeight);
+
+            &_button {
+                height: var(--headerBottomSearchHeight);
+
+                &.open {
+                    > button {
+                        color: var(--fourth);
+                        background-color: var(--secondary);
+                    }
+                }
+            }
+
+            button {
+                width: calc(
+                    (var(--wrapperWidth) / 4) - (var(--marginVert) * 3) +
+                        ((var(--marginVert) * 2.5) - (var(--border_thin) * 2))
+                );
+                height: var(--headerBottomSearchHeight);
+                border: var(--border_thin) solid var(--secondary);
+                border-radius: 0;
+                outline: none;
+                color: var(--secondary);
+                background-color: var(--fourth);
+                cursor: pointer;
+            }
+
+            &_dropdown {
+                width: calc(
+                    (var(--wrapperWidth) / 4) - (var(--marginVert) * 3) +
+                        ((var(--marginVert) * 2.5) - (var(--border_thin) * 2))
+                );
+                height: auto;
+                position: absolute;
+                top: calc(
+                    #{var(--headerDropdownTop)} +
+                        (var(--headerTopHeight) * 0.9) +
+                        (var(--marginVert) * 0.5)
+                ) !important;
+                left: inherit !important;
+                z-index: 1000;
+                display: none;
+                // padding: 0 var(--marginVert);
+                font-size: var(--font-size-small);
+                text-align: left;
+                list-style: none;
+                background-color: var(--secondary-lighten-60);
+                background-clip: padding-box;
+
+                li {
+                    width: calc(100% - (var(--marginVert) * 2));
+                    height: auto;
+                    padding: 0 var(--marginVert);
+
+                    a {
+                        width: 100%;
+                        display: block;
+                        color: var(--primary);
+                        padding: calc(var(--marginVert) / 2) 0;
+                    }
+
+                    &:hover {
+                        background-color: var(--secondary-lighten-50);
+                    }
+                }
             }
         }
     }
@@ -111,7 +212,7 @@
         min-width: 8rem;
         height: auto;
         position: absolute;
-        top: $headerDropdownTop;
+        top: var(--headerDropdownTop);
         left: 0;
         z-index: 1000;
         display: none;

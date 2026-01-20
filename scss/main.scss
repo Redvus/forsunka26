@@ -6,12 +6,13 @@
 @use "header";
 @use "footer";
 @use "layout";
+@use "sidebar";
 
 // @use "forsunka_mixins";
 // @use "forsunka_bootstrap";
 // @use "magnific-popup";
 // @use "header_ny2";
-// @use "sidebar";
+
 // @use "utility";
 // @use "nav";
 // @use "content";
@@ -21,5 +22,5 @@
 // @use "check";
 // @use "form";
 // @use "masterslider";
-// @use "slider_layers";
+@use "slider_layers";
 // @use "screen";
