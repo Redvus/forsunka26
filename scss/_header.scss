@@ -7,6 +7,7 @@
 /* ========================================================================== */
 .header {
     &-top {
+        width: 100%;
         height: var(--headerTopHeight);
         background-color: var(--secondary);
         display: flex;
@@ -17,8 +18,8 @@
         // font-size: var(--font-size-small);
         line-height: var(--font-size-small);
         color: var(--fourth);
-        position: static;
-        z-index: 1000;
+        position: fixed;
+        z-index: 3000;
 
         &__block {
             width: calc(100% / 3);
@@ -79,6 +80,7 @@
         align-items: flex-start;
         justify-content: space-between;
         padding: calc(var(--marginVert) * 0.5) 0 calc(var(--marginVert) * 0.5);
+        margin-top: var(--headerTopHeight);
         position: static;
         z-index: 1000;
 
@@ -160,6 +162,11 @@
                 color: var(--secondary);
                 background-color: var(--fourth);
                 cursor: pointer;
+
+                &:hover {
+                    color: var(--fourth);
+                    background-color: var(--secondary);
+                }
             }
 
             &_dropdown {

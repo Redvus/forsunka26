@@ -31,5 +31,72 @@
         display: flex;
         flex-direction: row;
         gap: calc(var(--marginVert) * 2);
+
+        &_bottom {
+            width: 100%;
+            height: auto;
+            position: relative;
+
+            &_title {
+                width: 100%;
+                min-height: calc(var(--marginVert) * 3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: var(--marginVert);
+                background-color: var(--third-lighten-75);
+                color: var(--fourth);
+                font-size: var(--font-size-large);
+            }
+
+            &_row {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: calc(var(--marginVert) * 1);
+                margin-bottom: calc(var(--marginVert) * 2);
+
+                &--4 {
+                    .wrapper__content_bottom_link {
+                        width: calc(100% / 4);
+                    }
+                }
+            }
+
+            &_link {
+                width: calc(100% / 3);
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+                flex: 1;
+
+                picture {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        position: relative;
+                        object-position: center;
+                        object-fit: cover;
+                    }
+                }
+
+                span {
+                    width: 100%;
+                    height: calc(var(--marginVert) * 2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--secondary);
+                    color: var(--fourth);
+                    font-size: var(--font-size-small);
+                }
+            }
+        }
     }
 }
