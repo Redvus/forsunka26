@@ -151,7 +151,7 @@ $font-width-extended: 125%;
 
 h1 {
     @include hx(h1);
-    font-weight: $font-weight-medium;
+    font-weight: $font-weight-regular;
     font-stretch: $font-width-normal;
 }
 
