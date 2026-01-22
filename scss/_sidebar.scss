@@ -12,9 +12,10 @@
 
     &__action {
         width: 100%;
-        height: var(--sidebarActionHeight);
+        min-height: var(--sidebarActionHeight);
         display: block;
         position: relative;
+        margin-bottom: calc(var(--marginVert) * 2);
 
         &_image {
             width: 100%;
