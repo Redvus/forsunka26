@@ -117,6 +117,39 @@ svg {
     transition: all 0.3s;
 }
 
+.active {
+    background-color: var(--secondary) !important;
+    border-color: var(--primary) !important;
+
+    i {
+        color: var(--fourth) !important;
+    }
+}
+
+.tooltip {
+    position: absolute !important;
+    padding: calc(var(--marginVert) * 0.3);
+    font-size: var(--font-size-small);
+    color: var(--fourth);
+    background-color: var(--secondary);
+    bottom: calc(100% + (var(--border_heavy) * 2));
+    z-index: 1000;
+    visibility: hidden;
+    display: none;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-50%, 10px);
+
+        border: var(--border_heavy) solid transparent;
+        border-top-color: var(--secondary);
+        border-bottom: none;
+    }
+}
+
 %input {
     outline: none;
     margin-bottom: 1rem;

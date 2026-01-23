@@ -112,10 +112,7 @@
                 input {
                     width: calc(
                         (var(--wrapperWidth) / 4) - (var(--marginVert) * 3) -
-                            (
-                                (var(--marginVert) * 1.5) -
-                                    (var(--border_thin) * 2)
-                            )
+                            ((var(--marginVert) * 2)) - (var(--border_thin) * 2)
                     );
                     // height: calc(100% - ((var(--marginVert) / 3) * 2));
                     display: block;
@@ -153,7 +150,7 @@
             button {
                 width: calc(
                     (var(--wrapperWidth) / 4) - (var(--marginVert) * 3) +
-                        ((var(--marginVert) * 2.5) - (var(--border_thin) * 2))
+                        ((var(--marginVert) * 2) - (var(--border_thin) * 2))
                 );
                 height: var(--headerBottomSearchHeight);
                 border: var(--border_thin) solid var(--secondary);

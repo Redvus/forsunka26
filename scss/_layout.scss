@@ -47,6 +47,17 @@
         }
     }
 
+    &__intro {
+        &_banner {
+            width: 100%;
+            min-height: calc(var(--wrapperWidth) / 7);
+            overflow: hidden;
+            margin: 0 auto calc(var(--marginVert) * 2);
+            padding: 0;
+            background-color: var(--third-lighten-85);
+        }
+    }
+
     &__content {
         // width: 100%;
         display: flex;
@@ -117,6 +128,76 @@
                     background-color: var(--secondary);
                     color: var(--fourth);
                     font-size: var(--font-size-small);
+                }
+            }
+        }
+    }
+
+    &__category {
+        &_filter {
+            width: 100%;
+            height: calc(var(--marginVert) * 2);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: var(--marginVert) 0;
+            padding: var(--marginVert) 0;
+            border-top: var(--border_thin) solid var(--third-lighten-75);
+
+            &_thumb {
+                min-width: calc(var(--marginVert) * 1);
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                margin-right: calc(var(--marginVert) * 1);
+
+                .btn {
+                    width: calc(var(--marginVert) * 2);
+                    height: calc(var(--marginVert) * 2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    background-color: var(--third-lighten-85);
+                    outline: none;
+                    border: var(--border_thin) solid var(--third-lighten-75);
+                    margin-right: calc(var(--marginVert) / 4);
+                    cursor: pointer;
+
+                    i {
+                        color: var(--primary);
+                    }
+
+                    &:hover {
+                        background-color: var(--secondary);
+                        border-color: var(--primary);
+
+                        i {
+                            color: var(--fourth);
+                        }
+                    }
+                }
+            }
+
+            &_select {
+                width: auto;
+                height: calc(var(--marginVert) * 2);
+                display: flex;
+                align-items: center;
+                margin-right: calc(var(--marginVert) * 1);
+
+                &--sort {
+                    width: calc(var(--marginVert) * 18);
+                }
+
+                &--limit {
+                    width: calc(var(--marginVert) * 4);
+                }
+
+                .form-control {
+                    height: 100%;
+                    border: var(--border_thin) solid var(--third-lighten-75);
+                    padding: 0 calc(var(--marginVert) / 2);
                 }
             }
         }
