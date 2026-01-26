@@ -5,10 +5,11 @@
 ===================================*/
 
 $colors: (
-    primary: #002e6f,
+    primary: #004490,
+    //#002e6f
     // Оранжевый
     secondary: #0053a4,
-    // #ee4c30
+    // #0053a4
     // Бордовый
     third: #000,
     // Темный var1: #1E252B
@@ -39,6 +40,7 @@ $colors: (
         --#{$name}-lighten-30: #{color.adjust($color, $lightness: 30%)};
         --#{$name}-lighten-50: #{color.adjust($color, $lightness: 50%)};
         --#{$name}-lighten-60: #{color.adjust($color, $lightness: 60%)};
+        --#{$name}-lighten-65: #{color.adjust($color, $lightness: 65%)};
         --#{$name}-lighten-70: #{color.adjust($color, $lightness: 70%)};
         --#{$name}-lighten-75: #{color.adjust($color, $lightness: 75%)};
         --#{$name}-lighten-85: #{color.adjust($color, $lightness: 85%)};

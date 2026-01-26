@@ -13,37 +13,46 @@
 // @import url('https://use.fontawesome.com/releases/v5.10.0/css/all.css');
 @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=cyrillic");
 // @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-//
-//$primary-font      : Helvetica, serif;
-//$heading-font      : 'Oswald', sans-serif;
-//$heading-font-light: 'Oswald', sans-serif;
-//
-//$fa-font-path: 'webfonts/';
-//
-//$body-font-color: var(--primary-lighten-10);
-//
-//$body-font-size     : 1rem !default;
-//$body-font-weight   : normal !default;
-//$body-line-height   : 1.4 !default;
-//$heading-line-height: 1 !default;
-//
-//$heading-font-modular : 1rem !default;
-//
-//// $bourbon: (
-//// 	"modular-scale-base": $heading-font-modular,
-//// 	"modular-scale-ratio": $major-second //$major-second
-//// );
-//
-//$font-size-base:    $body-font-size !default;
-//$font-size-large:   $font-size-base + 0.2 !default; // ~18px
-//$font-size-small:   $font-size-base - 0.2 !default; // ~14px
-//
-//$font-size-h1:      calc(1rem + 1.1vmax) !default; // ~3rem 48px modular-scale(6)
-//$font-size-h2:      calc(1rem + 0.9vmax) !default; // ~2.5rem 40px modular-scale(5)
-//$font-size-h3:      calc(1rem + 0.7vmax) !default; // ~2rem 33px
-//$font-size-h4:      calc(1rem + 0.15vmax) !default; // ~1.728rem 28px
-//$font-size-h5:      calc(1rem + 0.13vmax) !default; // ~1.44rem 23px
-//$font-size-h6:      calc(1rem + 0.1vmax) !default; // ~1.2rem 19px
+
+@font-face {
+    font-family: "PF DinDisplay Pro Bold";
+    src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff")
+        format("woff-variations");
+    src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff")
+        format("woff") tech("variations");
+    font-weight: 700;
+    font-style: normal;
+    // font-stretch: 75% 125%;
+    // font-style: oblique 0deg 10deg;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PF DinDisplay Pro";
+    src: url("../webfonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff")
+        format("woff-variations");
+    src: url("../webfonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff")
+        format("woff") tech("variations");
+    font-weight: 400;
+    font-style: normal;
+    // font-stretch: 75% 125%;
+    // font-style: oblique 0deg 10deg;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PF DinDisplay Pro Thin";
+    src: url("../webfonts/PFDinDisplayPro-Thin/PFDinDisplayPro-Thin_0.woff")
+        format("woff-variations");
+    src: url("../webfonts/PFDinDisplayPro-Thin/PFDinDisplayPro-Thin_0.woff")
+        format("woff") tech("variations");
+    font-weight: 200;
+    font-style: normal;
+    // font-stretch: 75% 125%;
+    // font-style: oblique 0deg 10deg;
+    font-display: swap;
+}
+
 /*=====  End of Fonts  ======*/
 
 // Weight axis (typically 100-900)
@@ -60,8 +69,9 @@ $font-width-extended: 125%;
 
 :root {
     --primary-font: Helvetica, serif;
-    --heading-font: "Oswald", sans-serif;
-    --heading-font-light: "Oswald", sans-serif;
+    --heading-font: "PF DinDisplay Pro", sans-serif;
+    --heading-font-light: "PF DinDisplay Pro Thin", sans-serif;
+    --heading-font-bold: "PF DinDisplay Pro Bold", sans-serif;
 
     --body-font-color: var(--third);
     --heading-font-color: var(--primary);
