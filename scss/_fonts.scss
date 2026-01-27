@@ -8,18 +8,18 @@
 =            Fonts            =
 =============================*/
 
-@import url("https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic");
+// @import url("https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic");
 // @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 // @import url('https://use.fontawesome.com/releases/v5.10.0/css/all.css');
-@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=cyrillic");
+// @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=cyrillic");
 // @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 @font-face {
     font-family: "PF DinDisplay Pro Bold";
     src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff")
-        format("woff-variations");
+        format("woff");
     src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff")
-        format("woff") tech("variations");
+        format("woff");
     font-weight: 700;
     font-style: normal;
     // font-stretch: 75% 125%;
@@ -30,12 +30,12 @@
 @font-face {
     font-family: "PF DinDisplay Pro";
     src: url("../webfonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff")
-        format("woff-variations");
+        format("woff");
     src: url("../webfonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff")
-        format("woff") tech("variations");
+        format("woff");
     font-weight: 400;
     font-style: normal;
-    // font-stretch: 75% 125%;
+    // font-stretch: 100;
     // font-style: oblique 0deg 10deg;
     font-display: swap;
 }
@@ -43,9 +43,9 @@
 @font-face {
     font-family: "PF DinDisplay Pro Thin";
     src: url("../webfonts/PFDinDisplayPro-Thin/PFDinDisplayPro-Thin_0.woff")
-        format("woff-variations");
+        format("woff");
     src: url("../webfonts/PFDinDisplayPro-Thin/PFDinDisplayPro-Thin_0.woff")
-        format("woff") tech("variations");
+        format("woff");
     font-weight: 200;
     font-style: normal;
     // font-stretch: 75% 125%;
