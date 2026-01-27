@@ -11,18 +11,22 @@
     --base-timing: 0.3s;
 
     --marginVert: 1rem;
+    --gapMain: calc(var(--marginVert) * 1);
+    --gapDouble: calc(var(--marginVert) * 2);
 
     --wrapperWidth: 71rem; // 1140px
 
-    --headerTopHeight: calc(var(--marginVert) * 2);
+    // --layoutBackground: var(--fourth);
+    --layoutBackground: var(--third-lighten-95);
+    --elementBackground: var(--fourth);
+    --sidebarBackground: var(--third-lighten-85);
 
     /*==============================
     =            Header            =
     ==============================*/
+    --headerTopHeight: calc(var(--marginVert) * 2);
     --headerBottomHeight: calc(var(--headerTopHeight) * 0.9);
-
     --headerDropdownTop: var(--headerTopHeight);
-
     --headerBottomSearchHeight: 100%;
 
     /*=====  End of Header  ======*/
@@ -142,15 +146,6 @@ i {
 
 svg {
     transition: all 0.3s;
-}
-
-.active {
-    background-color: var(--secondary) !important;
-    border-color: var(--primary) !important;
-
-    i {
-        color: var(--fourth) !important;
-    }
 }
 
 .tooltip {

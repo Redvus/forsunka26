@@ -82,6 +82,8 @@
         padding: calc(var(--marginVert) * 0.5) 0 calc(var(--marginVert) * 0.5);
         margin-top: var(--headerTopHeight);
         position: static;
+        // border-bottom: var(--border_thin) solid var(--productBorderColor);
+        background-color: var(--sidebarBackground);
         z-index: 1000;
 
         &--row {

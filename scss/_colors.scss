@@ -7,10 +7,8 @@
 $colors: (
     primary: #004490,
     //#002e6f
-    // Оранжевый
     secondary: #0053a4,
     // #0053a4
-    // Бордовый
     third: #000,
     // Темный var1: #1E252B
     fourth: #fff,
@@ -44,6 +42,7 @@ $colors: (
         --#{$name}-lighten-70: #{color.adjust($color, $lightness: 70%)};
         --#{$name}-lighten-75: #{color.adjust($color, $lightness: 75%)};
         --#{$name}-lighten-85: #{color.adjust($color, $lightness: 85%)};
+        --#{$name}-lighten-90: #{color.adjust($color, $lightness: 90%)};
         --#{$name}-lighten-95: #{color.adjust($color, $lightness: 95%)};
     }
 }
@@ -55,10 +54,6 @@ $colors: (
 =====================================*/
 
 :root {
-    // --layoutBackground: var(--fourth);
-    --layoutBackground: var(--third-lighten-95);
-    --elementBackground: var(--fourth);
-
     --error: var(--third);
     --success: var(--fourth);
 }

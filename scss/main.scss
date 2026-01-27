@@ -8,8 +8,9 @@
 @use "layout";
 @use "sidebar";
 
-// @use "forsunka_mixins";
-// @use "forsunka_bootstrap";
+@use "category";
+@use "product";
+@use "slider_layers";
 // @use "magnific-popup";
 // @use "header_ny2";
 
@@ -17,10 +18,8 @@
 // @use "nav";
 // @use "content";
 // @use "register";
-// @use "product";
+
 // @use "shop";
 // @use "check";
 // @use "form";
 // @use "masterslider";
-@use "slider_layers";
-// @use "screen";

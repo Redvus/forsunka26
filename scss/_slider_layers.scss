@@ -4,7 +4,7 @@
     overflow: hidden;
     margin: 0 auto calc(var(--marginVert) * 2);
     padding: 0;
-    background-color: #d6d6d6;
+    background-color: var(--elementBackground);
     // border: $border;
     // border-radius: $border-radius-large;
 
