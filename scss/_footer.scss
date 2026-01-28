@@ -1,0 +1,82 @@
+.footer {
+    // width: 100vw;
+    min-height: 100px;
+    position: relative;
+    background-color: var(--secondary);
+    left: 0;
+    // bottom: 0;
+    // padding-left: 15px;
+    margin-top: 50px;
+    color: #fff;
+    font-size: var(--font-size-small);
+    // padding: 15px 0;
+
+    // h3,
+    // h4 {
+    //     color: #fff !important;
+    //     margin: 5px 0;
+    // }
+
+    // h5 {
+    //     color: $third-darker !important;
+    //     margin: 5px 0;
+    // }
+
+    // a[href^="tel"] {
+    //     font: {
+    //         family: $heading-font-family;
+    //         size: $font-size-h4;
+    //     }
+    //     color: #fff !important;
+    //     margin: 0;
+    // }
+
+    // ul {
+    //     li {
+    //         a {
+    //             color: #fff;
+    //             @include transition(0.25s);
+
+    //             &:hover,
+    //             &:focus {
+    //                 color: $third-darker;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // hr {
+    //     margin: 10px 0;
+    // }
+
+    // p {
+    //     margin: 0;
+    // }
+
+    // .counters-block {
+    //     min-height: 25px;
+
+    //     .counters {
+    //         //position: absolute;
+    //         width: 88px;
+    //         height: 31px;
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+    //         margin-left: 10px;
+    //         float: right;
+    //         // background: gray;
+    //         /*opacity: 0;*/
+    //     }
+    // }
+
+    // a {
+    //     color: #fff;
+    //     @include transition(0.25s);
+
+    //     &:hover,
+    //     &:focus {
+    //         color: $third-darker;
+    //     }
+    // }
+}

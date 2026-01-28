@@ -1,38 +1,216 @@
-/* ========================================================================== */
-/* @FONT-FACE */
-/* ========================================================================== */
+@use "sass:color";
+@use "breakpoints" as bp;
+@use "../../assets/fonts/fontawesome-free-7.0.0-web/scss/fontawesome.scss";
+@use "../../assets/fonts/fontawesome-free-7.0.0-web/scss/brands.scss";
+@use "../../assets/fonts/fontawesome-free-7.0.0-web/scss/solid.scss";
+
+/*=============================
+=            Fonts            =
+=============================*/
+
+// @import url("https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic");
+// @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+// @import url('https://use.fontawesome.com/releases/v5.10.0/css/all.css');
+// @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=cyrillic");
+// @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),
-  		url('fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),
-  		url('fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),
-  		url('fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),
-  		url('fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: "PF DinDisplay Pro Bold";
+    src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff")
+        format("woff");
+    src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff")
+        format("woff");
+    font-weight: 700;
+    font-style: normal;
+    // font-stretch: 75% 125%;
+    // font-style: oblique 0deg 10deg;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'PF DinDisplay Pro';
-  src: url('fonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.eot'); /* IE9 Compat Modes */
-  src: url('fonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff') format('woff'), /* Modern Browsers */
-       url('fonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.svg#c7c552b53e70aa14ad820ca7036ddc41') format('svg'); /* Legacy iOS */
-       
-  font-style:   normal;
-  font-weight:  400;
+    font-family: "PF DinDisplay Pro";
+    src: url("../webfonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff")
+        format("woff");
+    src: url("../webfonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff")
+        format("woff");
+    font-weight: 400;
+    font-style: normal;
+    // font-stretch: 100;
+    // font-style: oblique 0deg 10deg;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'PF DinDisplay Pro Bold';
-  src: url('fonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.eot'); /* IE9 Compat Modes */
-  src: url('fonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff') format('woff'), /* Modern Browsers */
-       url('fonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.svg#48b0ce7e939532567f5c9c00a1e1a6df') format('svg'); /* Legacy iOS */
-       
-  font-style:   normal;
-  font-weight:  700;
+    font-family: "PF DinDisplay Pro Thin";
+    src: url("../webfonts/PFDinDisplayPro-Thin/PFDinDisplayPro-Thin_0.woff")
+        format("woff");
+    src: url("../webfonts/PFDinDisplayPro-Thin/PFDinDisplayPro-Thin_0.woff")
+        format("woff");
+    font-weight: 200;
+    font-style: normal;
+    // font-stretch: 75% 125%;
+    // font-style: oblique 0deg 10deg;
+    font-display: swap;
+}
+
+/*=====  End of Fonts  ======*/
+
+// Weight axis (typically 100-900)
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$font-width-condensed: 75%;
+$font-width-normal: 100%;
+$font-width-extended: 125%;
+
+:root {
+    --primary-font: Helvetica, serif;
+    --heading-font: "PF DinDisplay Pro", sans-serif;
+    --heading-font-light: "PF DinDisplay Pro Thin", sans-serif;
+    --heading-font-bold: "PF DinDisplay Pro Bold", sans-serif;
+
+    --body-font-color: var(--third);
+    --heading-font-color: var(--primary);
+
+    --body-font-size: 1rem;
+    --body-font-weight: normal;
+    --body-line-height: 1.4;
+    --heading-line-height: 1;
+
+    --font-size-base: var(--body-font-size);
+    --font-size-large: calc(
+        var(--font-size-base) + (var(--font-size-base) / 5)
+    );
+    // --font-size-small:   calc(var(--font-size-base) - (var(--font-size-base) / 5));
+    --font-size-small: 0.7rem;
+    --font-size-small-adaptive: 1.55vmin;
+    --font-size-h1: calc(var(--font-size-base) + 1.3vmax);
+    --font-size-h2: calc(var(--font-size-base) + 0.9vmax);
+    --font-size-h3: calc(var(--font-size-base) + 0.5vmax);
+    --font-size-h4: calc(var(--font-size-base) + 0.2vmax);
+    --font-size-h5: calc(var(--font-size-base) + 0.05vmax);
+    --font-size-h6: calc(var(--font-size-base) + 0.03vmax);
+}
+
+@include bp.media-up("XLarge") {
+    :root {
+        --font-size-small: 0.7rem;
+    }
+}
+
+@include bp.media-up("Small") {
+    :root {
+        --font-size-small: 2.5vmin;
+    }
+}
+
+// Base fonts styles
+@mixin px($size: base) {
+    font-family: var(--primary-font), serif;
+    font-weight: $font-weight-regular;
+    font-stretch: $font-width-normal;
+    line-height: var(--body-line-height);
+    color: var(--body-font-color);
+
+    @if $size == base {
+        font-size: var(--font-size-base);
+    } @else if $size == large {
+        font-size: var(--font-size-large);
+    } @else if $size == small {
+        font-size: var(--font-size-small);
+
+        @include bp.media-up("XLarge") {
+            font-weight: $font-weight-medium;
+        }
+
+        @include bp.media-up("Large") {
+            font-weight: $font-weight-regular;
+            line-height: 1.2;
+        }
+    }
+}
+
+// Headings mixin
+@mixin hx($size) {
+    font-family: var(--heading-font);
+    font-weight: $font-weight-regular;
+    color: var(--heading-font-color);
+    display: block;
+    line-height: var(--heading-line-height);
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @if $size == h1 {
+        font-size: var(--font-size-h1);
+    } @else if $size == h2 {
+        font-size: var(--font-size-h2);
+    } @else if $size == h3 {
+        font-size: var(--font-size-h3);
+    } @else if $size == h4 {
+        font-size: var(--font-size-h4);
+    } @else if $size == h5 {
+        font-size: var(--font-size-h5);
+    } @else if $size == h6 {
+        font-size: var(--font-size-h6);
+    }
+}
+
+h1 {
+    @include hx(h1);
+    font-weight: $font-weight-regular;
+    font-stretch: $font-width-normal;
+}
+
+h2 {
+    @include hx(h2);
+    font-weight: $font-weight-regular;
+    font-stretch: $font-width-normal;
+}
+
+h3 {
+    @include hx(h3);
+    font-weight: $font-weight-thin;
+    font-stretch: $font-width-extended;
+}
+
+h4 {
+    @include hx(h4);
+}
+
+h5 {
+    @include hx(h5);
+}
+
+h6 {
+    @include hx(h6);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    // li {
+
+    //     @include grid-media($Medium) {
+    //         font-size: var(--font-size-large;
+    //     }
+    // }
+}
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: all var(--base-duration);
+    outline: none;
+
+    // &:active,
+    // &:focus,
+    // &:hover {
+    //     //color: $action-color;
+    // }
 }
