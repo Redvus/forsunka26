@@ -1,0 +1,42 @@
+@use "fonts" as *;
+@use "sass:color";
+@use "breakpoints" as bp;
+@use "variables" as *;
+
+.checkout {
+    &__panel {
+        background-color: var(--elementBackground);
+
+        &s {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-top: var(--marginVert);
+        }
+
+        &_title {
+            width: calc(100% - (var(--marginVert) * 2));
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            padding: var(--marginVert);
+            background-color: var(--sidebarBackground);
+        }
+
+        &_body {
+            .row {
+                width: calc(100% - (var(--marginVert) * 2));
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                padding: var(--marginVert);
+                gap: var(--gapDouble);
+            }
+
+            .col-sm-6 {
+                flex: 1;
+            }
+        }
+    }
+}

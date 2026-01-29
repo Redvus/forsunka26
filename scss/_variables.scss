@@ -49,6 +49,7 @@
     ===============================*/
     --productWidth: calc((100% / 3) - (var(--marginVert) * 0.8));
     --productBorderColor: var(--third-lighten-75);
+    --borderThin: var(--border_thin) solid var(--productBorderColor);
 
     /*=====  End of Product  ======*/
 }
@@ -173,21 +174,26 @@ svg {
 }
 
 %input {
+    width: calc(100% - (var(--marginVert) * 2));
+    position: relative;
+    display: block;
+    padding: calc(var(--marginVert) / 2) var(--marginVert);
+    margin-bottom: var(--marginVert);
     outline: none;
     margin-bottom: 1rem;
     font-family: var(--primary-font);
     font-size: var(--font-size-base);
     // text-align: center;
-    border: 0.15rem solid var(--primary);
+    border: var(--borderThin);
     border-radius: 0;
-    background-color: transparent;
-    color: var(--secondary);
+    background-color: var(--layoutBackground);
+    color: var(--primary);
     transition: all 0.3s;
     // -webkit-appearance: none;
 
     &:focus {
         background-color: var(--fourth);
-        border-color: var(--secondary);
+        border-color: var(--primary);
     }
 
     &:focus::-webkit-input-placeholder {
@@ -207,24 +213,24 @@ svg {
 
     &::-webkit-input-placeholder {
         /* WebKit browsers */
-        color: var(--secondary);
+        color: var(--third-lighten-50);
     }
 
     &::-moz-placeholder {
         /* Mozilla Firefox 4 to 18 */
-        color: var(--secondary);
+        color: var(--third-lighten-50);
         opacity: 1;
     }
 
     &::-moz-placeholder {
         /* Mozilla Firefox 19+ */
-        color: var(--secondary);
+        color: var(--third-lighten-50);
         opacity: 1;
     }
 
     &::-ms-input-placeholder {
         /* Internet Explorer 10+ */
-        color: var(--secondary);
+        color: var(--third-lighten-50);
     }
 }
 
@@ -265,6 +271,20 @@ textarea,
     input[type="password"] {
         &:focus {
             box-shadow: none !important;
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    tr {
+        td {
+            border: var(--borderThin);
+            box-sizing: border-box;
+            padding: var(--marginVert);
+            text-align: center;
         }
     }
 }
