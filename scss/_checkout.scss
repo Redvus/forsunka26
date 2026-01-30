@@ -25,7 +25,35 @@
         }
 
         &_body {
-            .row {
+            input[type="text"],
+            input[type="password"] {
+                @extend %input;
+            }
+
+            select {
+                @extend %input;
+                width: 100%;
+                padding: calc(var(--marginVert) / 2) var(--marginVert);
+            }
+
+            label {
+                display: none;
+                visibility: hidden;
+            }
+
+            .radio,
+            .checkbox {
+                label {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &_block {
+            flex: 1;
+
+            &s {
                 width: calc(100% - (var(--marginVert) * 2));
                 position: relative;
                 display: flex;
@@ -33,10 +61,66 @@
                 padding: var(--marginVert);
                 gap: var(--gapDouble);
             }
+        }
 
-            .col-sm-6 {
-                flex: 1;
+        &_single {
+            width: calc(100% - (var(--marginVert) * 2));
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: var(--marginVert);
+        }
+
+        fieldset {
+            border: var(--borderThin);
+            background-color: var(--elementBackground);
+            margin: var(--marginVert) 0;
+            padding: var(--marginVert);
+
+            legend {
+                @include hx(h4);
+            }
+
+            input {
+                @extend %input;
+            }
+
+            select {
+                @extend %input;
+                width: 100%;
+                padding: calc(var(--marginVert) / 2) var(--marginVert);
+            }
+
+            label {
+                display: none;
+                visibility: hidden;
             }
         }
+
+        .checkbox {
+            padding: calc(var(--marginVert) / 2) var(--marginVert);
+        }
+    }
+
+    &__agree {
+        display: flex;
+        flex-direction: column;
+        padding: calc(var(--marginVert) / 2) var(--marginVert);
+
+        &_text {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin: calc(var(--marginVert) / 2) 0;
+
+            input {
+                margin-right: calc(var(--marginVert) / 2);
+            }
+        }
+    }
+
+    &__button {
+        @extend %button;
+        margin: var(--marginVert) 0;
     }
 }
