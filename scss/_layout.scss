@@ -19,8 +19,12 @@
         }
     }
 
+    &--column {
+        flex-direction: column;
+    }
+
     &--main {
-        min-height: 100vh;
+        min-height: 70vh;
         display: block;
         position: relative;
         z-index: 1;

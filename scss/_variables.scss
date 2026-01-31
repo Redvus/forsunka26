@@ -251,6 +251,10 @@ select {
     line-height: inherit;
 }
 
+textarea {
+    @extend %input;
+}
+
 button,
 input,
 a {
@@ -307,5 +311,11 @@ table {
     &:hover {
         background-color: var(--primary-darken-10) !important;
     }
+}
+
+.bootstrap-datetimepicker-widget {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
 }
 /*=====  End of Layout  ======*/
