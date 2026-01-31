@@ -218,8 +218,9 @@
         min-width: 8rem;
         height: auto;
         position: absolute;
-        top: var(--headerDropdownTop);
-        left: 0;
+        // top: var(--headerDropdownTop);
+        top: 100%;
+        left: auto;
         z-index: 1000;
         display: none;
         // padding: 0 var(--marginVert);
