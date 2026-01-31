@@ -42,6 +42,49 @@
                 }
             }
         }
+
+        &_input {
+            width: 100%;
+            height: calc(var(--marginVert) * 2);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            input {
+                width: calc(var(--marginVert) * 3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border: var(--borderThin);
+                font-size: var(--font-size-base);
+            }
+        }
+
+        &_buttons {
+            height: calc(var(--marginVert) * 2);
+            display: flex;
+            align-items: center;
+
+            button {
+                width: calc(var(--marginVert) * 2);
+                height: calc(var(--marginVert) * 2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--sidebarBackground);
+                margin: 0 calc(var(--marginVert) * 0.2);
+                outline: none;
+                border: var(--borderThin);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--primary);
+                    color: var(--elementBackground);
+                    border-color: var(--primary);
+                }
+            }
+        }
     }
 
     &__total {
