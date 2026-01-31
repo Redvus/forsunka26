@@ -1,0 +1,26 @@
+@use "fonts" as *;
+@use "sass:color";
+@use "breakpoints" as bp;
+@use "variables" as *;
+
+.contact {
+    width: 100%;
+
+    &__description {
+        margin: var(--marginVert) 0;
+    }
+
+    &__info {
+        padding: var(--marginVert) 0;
+        border-top: var(--border_thin) solid var(--productBorderColor);
+        border-bottom: var(--border_thin) solid var(--productBorderColor);
+
+        &_block {
+            margin-bottom: var(--marginVert);
+        }
+
+        &_title {
+            margin-bottom: calc(var(--marginVert) / 2);
+        }
+    }
+}

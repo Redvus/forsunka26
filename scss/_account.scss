@@ -1,0 +1,110 @@
+@use "fonts" as *;
+@use "sass:color";
+@use "breakpoints" as bp;
+@use "variables" as *;
+
+.account {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: var(--gapDouble);
+
+    &__main {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__info {
+        flex: 1;
+    }
+
+    form {
+        width: 100%;
+        position: relative;
+
+        fieldset {
+            border: var(--borderThin);
+            background-color: var(--elementBackground);
+            margin: var(--marginVert) 0;
+            padding: var(--marginVert);
+
+            legend {
+                @include hx(h4);
+            }
+
+            input {
+                @extend %input;
+            }
+
+            select {
+                @extend %input;
+                width: 100%;
+                padding: calc(var(--marginVert) / 2) var(--marginVert);
+            }
+
+            label {
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__button {
+        width: fit-content !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        outline: none !important;
+        border: 0 !important;
+        background-color: var(--primary) !important;
+        color: var(--elementBackground) !important;
+        cursor: pointer;
+        font-size: var(--font-size-base) !important;
+        padding: calc(var(--marginVert) * 0.5) var(--marginVert) !important;
+
+        &:hover {
+            background-color: var(--primary-darken-10) !important;
+        }
+
+        &s {
+            margin: var(--marginVert) 0 !important;
+        }
+    }
+
+    &__description {
+        width: 100%;
+        position: relative;
+        display: block;
+        margin: var(--marginVert) 0;
+    }
+
+    &__list {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &_item {
+            width: calc(
+                100% - (var(--marginVert) * 2) - (var(--bborder-thin) * 2)
+            );
+            position: relative;
+            padding: calc(var(--marginVert) * 0.5) var(--marginVert);
+            border: var(--borderThin);
+            border-bottom: none;
+            font-size: var(--font-size-small);
+
+            &:last-child {
+                border-bottom: var(--borderThin);
+            }
+
+            &:hover {
+                background-color: var(--sidebarBackground);
+            }
+        }
+    }
+}
