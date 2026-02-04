@@ -16,10 +16,8 @@
 
 @font-face {
     font-family: "PF DinDisplay Pro Bold";
-    src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff")
-        format("woff");
-    src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff")
-        format("woff");
+    src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff") format("woff");
+    src: url("../webfonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     // font-stretch: 75% 125%;
@@ -29,10 +27,7 @@
 
 @font-face {
     font-family: "PF DinDisplay Pro";
-    src: url("../webfonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff")
-        format("woff");
-    src: url("../webfonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff")
-        format("woff");
+    src: url("../webfonts/PFDinDisplayPro-Reg/PFDinDisplayPro-Reg.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     // font-stretch: 100;
@@ -42,10 +37,7 @@
 
 @font-face {
     font-family: "PF DinDisplay Pro Thin";
-    src: url("../webfonts/PFDinDisplayPro-Thin/PFDinDisplayPro-Thin_0.woff")
-        format("woff");
-    src: url("../webfonts/PFDinDisplayPro-Thin/PFDinDisplayPro-Thin_0.woff")
-        format("woff");
+    src: url("../webfonts/PFDinDisplayPro-Thin/PFDinDisplayPro-Thin_0.woff") format("woff");
     font-weight: 200;
     font-style: normal;
     // font-stretch: 75% 125%;
@@ -82,12 +74,8 @@ $font-width-extended: 125%;
     --heading-line-height: 1;
 
     --font-size-base: var(--body-font-size);
-    --font-size-large: calc(
-        var(--font-size-base) + (var(--font-size-base) / 5)
-    );
-    --font-size-small: calc(
-        var(--font-size-base) - (var(--font-size-base) / 4)
-    );
+    --font-size-large: calc(var(--font-size-base) + (var(--font-size-base) / 5));
+    --font-size-small: calc(var(--font-size-base) - (var(--font-size-base) / 4));
     // --font-size-small: 0.7rem;
     --font-size-small-adaptive: 1.55vmin;
     --font-size-h1: calc(var(--font-size-base) + 1.3vmax);
@@ -118,11 +106,15 @@ $font-width-extended: 125%;
     line-height: var(--body-line-height);
     color: var(--body-font-color);
 
-    @if $size == base {
+    @if $size ==base {
         font-size: var(--font-size-base);
-    } @else if $size == large {
+    }
+
+    @else if $size ==large {
         font-size: var(--font-size-large);
-    } @else if $size == small {
+    }
+
+    @else if $size ==small {
         font-size: var(--font-size-small);
 
         @include bp.media-up("XLarge") {
@@ -146,17 +138,27 @@ $font-width-extended: 125%;
     margin-top: 0;
     margin-bottom: 0;
 
-    @if $size == h1 {
+    @if $size ==h1 {
         font-size: var(--font-size-h1);
-    } @else if $size == h2 {
+    }
+
+    @else if $size ==h2 {
         font-size: var(--font-size-h2);
-    } @else if $size == h3 {
+    }
+
+    @else if $size ==h3 {
         font-size: var(--font-size-h3);
-    } @else if $size == h4 {
+    }
+
+    @else if $size ==h4 {
         font-size: var(--font-size-h4);
-    } @else if $size == h5 {
+    }
+
+    @else if $size ==h5 {
         font-size: var(--font-size-h5);
-    } @else if $size == h6 {
+    }
+
+    @else if $size ==h6 {
         font-size: var(--font-size-h6);
     }
 }

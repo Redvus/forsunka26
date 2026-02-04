@@ -10,8 +10,15 @@
 
 @use "category";
 @use "product";
-@use "slider_layers";
+
 @use "contact";
 @use "account";
 @use "cart";
 @use "checkout";
+
+//Plugins
+@use "photoswipe";
+@use "masterslider";
+@use "slider_layers";
+
+// @use "magnific-popup";
