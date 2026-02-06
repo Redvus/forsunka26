@@ -19,7 +19,7 @@
         line-height: var(--font-size-small);
         color: var(--fourth);
         position: fixed;
-        z-index: 3000;
+        z-index: 10;
 
         &__block {
             width: calc(100% / 3);
@@ -75,10 +75,7 @@
             width: inherit !important;
             height: auto !important;
             position: absolute !important;
-            top: calc(
-                #{var(--headerDropdownTop)} + (var(--headerTopHeight) * 0.9) +
-                    (var(--marginVert) * 0.5)
-            ) !important;
+            top: calc(#{var(--headerDropdownTop)} + (var(--headerTopHeight) * 0.9) + (var(--marginVert) * 0.5)) !important;
             left: inherit !important;
             z-index: 1000 !important;
             display: none;
@@ -118,10 +115,10 @@
         justify-content: space-between;
         padding: calc(var(--marginVert) * 0.5) 0 calc(var(--marginVert) * 0.5);
         margin-top: var(--headerTopHeight);
-        position: static;
+        position: relative;
         // border-bottom: var(--border_thin) solid var(--productBorderColor);
         background-color: var(--sidebarBackground);
-        z-index: 1000;
+        z-index: 9;
 
         &--row {
             &-top {
@@ -131,10 +128,10 @@
 
         &__logo {
             position: absolute;
-            top: calc(#{var(--headerTopHeight)} + (var(--marginVert) / 2));
+            // top: calc(#{var(--headerTopHeight)} + (var(--marginVert) / 2));
             left: 50%;
             transform: translateX(-50%);
-            z-index: 1000;
+            z-index: 0;
         }
 
         &__search {
@@ -149,10 +146,7 @@
                 flex-direction: row;
 
                 input {
-                    width: calc(
-                        (var(--wrapperWidth) / 4) - (var(--marginVert) * 3) -
-                            ((var(--marginVert) * 2)) - (var(--border_thin) * 2)
-                    );
+                    width: calc((var(--wrapperWidth) / 4) - (var(--marginVert) * 3) - ((var(--marginVert) * 2)) - (var(--border_thin) * 2));
                     // height: calc(100% - ((var(--marginVert) / 3) * 2));
                     display: block;
                     // padding: calc(var(--marginVert) / 2) (var(--marginVert) / 3);
@@ -180,7 +174,7 @@
                 height: var(--headerBottomSearchHeight);
 
                 &.open {
-                    > button {
+                    >button {
                         color: var(--fourth);
                         background-color: var(--primary);
                     }
@@ -188,10 +182,7 @@
             }
 
             button {
-                width: calc(
-                    (var(--wrapperWidth) / 4) - (var(--marginVert) * 3) +
-                        ((var(--marginVert) * 2) - (var(--border_thin) * 2))
-                );
+                width: calc((var(--wrapperWidth) / 4) - (var(--marginVert) * 3) + ((var(--marginVert) * 2) - (var(--border_thin) * 2)));
                 height: var(--headerBottomSearchHeight);
                 border: var(--border_thin) solid var(--primary);
                 border-radius: 0;
@@ -299,7 +290,7 @@
     }
 }
 
-.open > .dropdown-menu {
+.open>.dropdown-menu {
     display: block;
 }
 

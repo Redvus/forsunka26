@@ -1,0 +1,33 @@
+{
+  "name": "forsunka26_dev",
+  "version": "1.0.0",
+  "description": "Forsunka Dev 2026",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Redvus",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^10.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.1.0",
+    "gulp-rimraf": "^1.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-watch": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "forsunka26_dev"
+  },
+  "dependencies": {
+    "magnific-popup": "^1.2.0",
+    "photoswipe": "^5.4.4",
+    "sass": "^1.97.2",
+    "tiny-slider": "^2.9.4"
+  }
+}

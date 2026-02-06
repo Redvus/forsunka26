@@ -5,7 +5,7 @@
 ===================================*/
 
 $colors: (
-    primary: #004490,
+    primary: #0053a4,
     //#002e6f
     secondary: #0053a4,
     // #0053a4
@@ -14,8 +14,9 @@ $colors: (
     fourth: #fff,
     five: #7a97ab,
     six: #b60b00,
+    seven: #7acf92,
     CWcolor: #0099cc,
-    YBcolor: #ffcc33,
+    YBcolor: #ffcc33
 );
 
 :root {
@@ -54,6 +55,6 @@ $colors: (
 =====================================*/
 
 :root {
-    --error: var(--third);
-    --success: var(--fourth);
+    --error: var(--six);
+    --success: var(--seven);
 }

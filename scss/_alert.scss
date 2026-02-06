@@ -1,0 +1,60 @@
+@use "fonts" as *;
+@use "sass:color";
+@use "breakpoints" as bp;
+@use "variables" as *;
+
+.alert {
+    width: 100%;
+    height: var(--headerTopHeight);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    color: var(--body-font-color);
+    font-size: var(--font-size-small);
+    z-index: 9000;
+
+    &-success {
+        background-color: var(--success);
+    }
+
+    &-warning,
+    &-danger {
+        // width: calc(100% / 3);
+        height: var(--headerBottomHeight);
+        top: var(--headerTopHeight);
+        left: inherit;
+        right: 0;
+        padding: calc(var(--marginVert) * 0.5) 0;
+        color: var(--fourth);
+        background-color: var(--error);
+        z-index: 9000;
+
+        a {
+            color: var(--fourth) !important;
+        }
+    }
+
+    i,
+    a,
+    button {
+        margin: 0 calc(var(--marginVert) * 0.5);
+    }
+
+    a {
+        color: var(--body-font-color);
+    }
+
+    button {
+        width: calc(var(--marginVert) * 1);
+        height: calc(var(--marginVert) * 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: 0;
+        background-color: var(--fourth);
+    }
+}

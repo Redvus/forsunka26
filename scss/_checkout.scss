@@ -25,6 +25,7 @@
         }
 
         &_body {
+
             input[type="text"],
             input[type="password"] {
                 @extend %input;
@@ -99,6 +100,16 @@
 
         .checkbox {
             padding: calc(var(--marginVert) / 2) var(--marginVert);
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: calc(var(--marginVert) * 2);
+        }
+
+        .btn {
+            @extend %button;
+            margin: var(--marginVert) 0;
         }
     }
 
