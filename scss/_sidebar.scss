@@ -40,4 +40,9 @@
             text-align: center;
         }
     }
+
+    @include bp.media-up("XSmall") {
+        display: none;
+        visibility: hidden;
+    }
 }
