@@ -16,7 +16,7 @@ const path = {
         npm: "node_modules/",
     },
     dest: {
-        css: "../opencart/catalog/view/theme/forsunka/stylesheet/",
+        css: "../opencart/catalog/view/theme/default/stylesheet/",
         js: "../opencart/catalog/view/javascript/",
     },
     watch: {

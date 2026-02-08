@@ -143,4 +143,14 @@
             }
         }
     }
+
+    @include bp.media-up("XSmall") {
+        flex-direction: column;
+
+        &__image {
+            picture {
+                height: calc((100vw / 2) - (var(--marginVert) * 2));
+            }
+        }
+    }
 }

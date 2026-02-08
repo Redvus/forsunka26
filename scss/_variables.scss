@@ -96,6 +96,12 @@
     }
 }
 
+@include bp.media-up("Small") {
+    :root {
+        --productWidth: calc(100% - (var(--marginVert) * 0.65));
+    }
+}
+
 body {
     @include px;
     // display: flex;
@@ -291,7 +297,14 @@ table {
             border: var(--borderThin);
             box-sizing: border-box;
             padding: var(--marginVert);
-            text-align: center;
+
+            &.text-left {
+                text-align: left;
+            }
+
+            &.text-center {
+                text-align: center;
+            }
         }
     }
 }

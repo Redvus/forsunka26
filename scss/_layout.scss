@@ -170,6 +170,7 @@
     @include bp.media-up("Small") {
         &--main {
             padding-top: calc(var(--marginVert) * 1);
+            overflow: hidden;
         }
 
         &--breadcrumbs {

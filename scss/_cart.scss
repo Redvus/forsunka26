@@ -94,10 +94,7 @@
         justify-content: flex-end;
 
         table {
-            width: calc(
-                (var(--wrapperWidth) / 4) - (var(--marginVert) * 3) +
-                    ((var(--marginVert) * 2) - (var(--border_thin) * 2))
-            );
+            width: calc((var(--wrapperWidth) / 4) - (var(--marginVert) * 3) + ((var(--marginVert) * 2) - (var(--border_thin) * 2)));
             background-color: var(--elementBackground);
         }
     }
@@ -121,5 +118,36 @@
             justify-content: space-between;
             margin: calc(var(--marginVert) * 2) 0;
         }
+    }
+
+    @include bp.media-up("XSmall") {
+
+        &__table {
+            display: flex;
+            flex-direction: column;
+
+            thead {
+                display: none;
+                visibility: hidden;
+            }
+
+            tbody {
+                tr {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        // &__button {
+
+        //     &s {
+        //         flex-direction: column;
+
+        //         a {
+        //             width: 100%;
+        //         }
+        //     }
+        // }
     }
 }
