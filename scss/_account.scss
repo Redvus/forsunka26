@@ -89,9 +89,7 @@
         flex-direction: column;
 
         &_item {
-            width: calc(
-                100% - (var(--marginVert) * 2) - (var(--bborder-thin) * 2)
-            );
+            width: calc(100% - (var(--marginVert) * 2) - (var(--bborder-thin) * 2));
             position: relative;
             padding: calc(var(--marginVert) * 0.5) var(--marginVert);
             border: var(--borderThin);
@@ -106,5 +104,9 @@
                 background-color: var(--sidebarBackground);
             }
         }
+    }
+
+    @include bp.media-up("XSmall") {
+        flex-direction: column;
     }
 }
