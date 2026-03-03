@@ -47,7 +47,7 @@
     /*===============================
     =            Product            =
     ===============================*/
-    --productWidth: calc((100% / 3) - (var(--marginVert) * 0.8));
+    --productWidth: calc((100% / 4) - (var(--marginVert) * 0.9));
     --productBorderColor: var(--third-lighten-75);
     --productImageCartWidth: calc((var(--marginVert) * 6));
 
@@ -76,7 +76,7 @@
     :root {
         --wrapperWidth: 71rem; // 1200px
         --headerTopHeight: calc(var(--marginVert) * 2); // 2rem
-        --productWidth: calc((100% / 3) - (var(--marginVert) * 0.8));
+        --productWidth: calc((100% / 4) - (var(--marginVert) * 0.9));
     }
 }
 
