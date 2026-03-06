@@ -127,11 +127,24 @@
         }
 
         &__logo {
+            width: 10rem;
+            height: auto;
             position: absolute;
             // top: calc(#{var(--headerTopHeight)} + (var(--marginVert) / 2));
             left: 50%;
             transform: translateX(-50%);
             z-index: 0;
+
+            a {
+                width: 100%;
+                height: 100%;
+                display: block;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
 
         &__search {
