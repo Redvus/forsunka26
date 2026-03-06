@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use "breakpoints" as bp;
+@use "variables" as *;
+
 .footer {
     width: 100%;
     // min-height: 100px;
@@ -73,6 +78,33 @@
                 &:hover {
                     color: var(--primary-lighten-50);
                 }
+            }
+        }
+    }
+
+    @include bp.media-up("XSmall") {
+        font-size: var(--font-size-base);
+
+        &__top {
+            // flex-direction: column;
+            flex-wrap: wrap;
+            gap: var(--gapMain);
+
+            &_part {
+                width: 100%;
+                max-width: 100%;
+                flex: 1 1 100%;
+                margin-bottom: var(--marginVert);
+                text-align: center;
+            }
+        }
+
+        &__bottom {
+            flex-direction: column;
+            text-align: center;
+
+            &_part {
+                margin-bottom: var(--marginVert);
             }
         }
     }

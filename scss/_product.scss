@@ -11,6 +11,8 @@
     gap: var(--gapDouble);
 
     &__image {
+        width: calc(100% - (var(--marginVert) * 2));
+        height: calc((100vw / 4));
         flex: 2.2;
 
         picture {
@@ -62,6 +64,7 @@
             flex-direction: row;
             justify-content: space-between;
             gap: var(--gapMain);
+            margin-top: var(--marginVert);
 
             &_quantity {
                 display: flex;
@@ -140,6 +143,16 @@
 
             p {
                 margin-top: 0;
+            }
+        }
+    }
+
+    @include bp.media-up("XSmall") {
+        flex-direction: column;
+
+        &__image {
+            picture {
+                height: calc((100vw / 2) - (var(--marginVert) * 2));
             }
         }
     }

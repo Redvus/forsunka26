@@ -78,6 +78,57 @@
                 padding: 0 calc(var(--marginVert) / 2);
             }
         }
+
+        &_pagination {
+
+            ul {
+                width: auto;
+                height: calc(var(--marginVert) * 2);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-right: calc(var(--marginVert) / 2);
+
+                li {
+                    width: calc(var(--marginVert) * 2);
+                    height: calc(var(--marginVert) * 2);
+                    margin-right: calc(var(--marginVert) / 3);
+                    // background-color: var(--third-lighten-85);
+                    border: var(--border_thin) solid var(--productBorderColor);
+                    cursor: pointer;
+
+                    a,
+                    span {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--primary);
+                    }
+
+                    &:hover {
+                        background-color: var(--primary);
+                        border-color: var(--primary);
+
+                        a {
+                            color: var(--fourth);
+                        }
+                    }
+
+                    &.active {
+                        background-color: var(--primary);
+                        border-color: var(--primary);
+                        color: var(--fourth);
+
+                        a,
+                        span {
+                            color: var(--fourth);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &__product {
@@ -184,13 +235,21 @@
             }
         }
     }
+
+    .active {
+        background-color: var(--secondary) !important;
+        border-color: var(--primary) !important;
+
+        i {
+            color: var(--fourth) !important;
+        }
+    }
 }
 
-.active {
-    background-color: var(--secondary) !important;
-    border-color: var(--primary) !important;
+.certificate {
+    height: 100%;
 
-    i {
-        color: var(--fourth) !important;
+    picture {
+        height: 100%;
     }
 }

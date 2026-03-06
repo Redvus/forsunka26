@@ -134,4 +134,34 @@
         @extend %button;
         margin: var(--marginVert) 0;
     }
+
+    @include bp.media-up("XSmall") {
+
+        &__panel {
+
+            &_blocks {
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            &_body {
+                table {
+                    display: flex;
+                    flex-direction: column;
+
+                    thead {
+                        display: none;
+                        visibility: hidden;
+                    }
+
+                    tbody {
+                        tr {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

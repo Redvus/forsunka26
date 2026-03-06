@@ -16,7 +16,7 @@ const path = {
         npm: "node_modules/",
     },
     dest: {
-        css: "../opencart/catalog/view/theme/forsunka/stylesheet/",
+        css: "../opencart/catalog/view/theme/default/stylesheet/",
         js: "../opencart/catalog/view/javascript/",
     },
     watch: {
@@ -122,11 +122,27 @@ function preloaderJs() {
         .pipe(gulp.dest(path.dest.js));
 }
 
+function customJs() {
+    return gulp
+        .src([
+            // path.src.npm + "tiny-slider/dist/" + "tiny-slider.js",
+            // path.src.npm + "bxslider/dist/" + "jquery.bxslider.js",
+            // path.src.js + "CalendarSearch.js",
+            // path.src.js + "Modal.js",
+            path.src.js + "custom.js",
+        ])
+        .pipe(concat("custom.js"))
+        .pipe(terser())
+        .pipe(rename({ suffix: "-min" }))
+        .pipe(gulp.dest(path.dest.js));
+}
+
 /*----------  Watch  ----------*/
 
 function watchFiles() {
     gulp.watch(path.watch.scss + "*.scss", buildStyles);
     gulp.watch(path.watch.js + "vendor.js", vendorJs);
+    gulp.watch(path.watch.js + "custom.js", customJs);
     gulp.watch(
         [
             path.watch.js + "main.js",
