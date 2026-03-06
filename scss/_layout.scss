@@ -145,6 +145,43 @@
         &--half {
             width: 50% !important;
         }
+
+        &_list {
+            width: 100%;
+            // display: flex;
+            // flex-direction: row;
+            // flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: var(--gapMain);
+
+            &_item {
+                // width: calc(100% / 6 - (var(--gapMain) * 2));
+                display: flex;
+                flex-direction: column;
+                border-right: var(--border_thin) solid var(--productBorderColor);
+                margin-bottom: var(--marginVert);
+            }
+        }
+
+        &_alphabet {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: var(--gapMain);
+            margin: var(--marginVert) 0;
+            border-top: var(--border_thin) solid var(--productBorderColor);
+            border-bottom: var(--border_thin) solid var(--productBorderColor);
+
+            // a {
+            //     display: block;
+            //     padding: var(--marginVert) var(--marginHor);
+            //     background-color: var(--sidebarBackground);
+            //     color: var(--primary);
+            //     font-size: var(--font-size-small);
+            // }
+        }
     }
 
     &__document {
