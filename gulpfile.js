@@ -36,12 +36,12 @@ function buildStyles() {
             // }).on('error', sass.logError))
             .pipe(sourcemaps.init())
             .pipe(sass().on("error", sass.logError))
-            // .pipe(
-            //     prefixer({
-            //         overrideBrowserslist: ["last 4 versions"],
-            //         cascade: false,
-            //     })
-            // )
+            .pipe(
+                prefixer({
+                    overrideBrowserslist: ["last 4 versions"],
+                    cascade: false,
+                }),
+            )
             .pipe(
                 cleanCSS({
                     compatibility: "ie8",

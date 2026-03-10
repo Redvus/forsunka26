@@ -2,6 +2,7 @@
 @use "sass:color";
 @use "breakpoints" as bp;
 @use "variables" as *;
+@use "mixins" as *;
 
 .wrapper {
     width: var(--wrapperWidth);
@@ -181,6 +182,69 @@
             //     color: var(--primary);
             //     font-size: var(--font-size-small);
             // }
+        }
+
+        &_grid {
+            margin-top: calc(var(--marginVert) * 2);
+
+            &_link {
+                // width: calc(100% / 3);
+                // max-width: calc(100% / 3);
+                // min-width: 0;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+                // flex: 1;
+
+                picture {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        position: relative;
+                        object-position: center;
+                        object-fit: cover;
+                    }
+                }
+
+                span {
+                    width: 100%;
+                    height: calc(var(--marginVert) * 2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--primary);
+                    color: var(--fourth);
+                    font-size: var(--font-size-small);
+                }
+            }
+
+            @include bp.media-up('XXLarge') {
+                @include grid(5, var(--marginVert));
+            }
+
+            @include bp.media-up('XLarge') {
+                @include grid(4, var(--marginVert));
+            }
+
+            @include bp.media-up('Large') {
+                @include grid(3, var(--marginVert));
+            }
+
+            @include bp.media-up('Medium') {
+                @include grid(2, var(--marginVert));
+            }
+
+            @include bp.media-up('XSmall') {
+                @include grid(2, var(--marginVert));
+            }
+
+            @include bp.media-up('Small') {
+                @include grid(1, var(--marginVert));
+            }
         }
     }
 
