@@ -416,6 +416,28 @@
         // }
     }
 
+    @include bp.media-up("XSmall") {
+        &-top {
+            &__block {
+
+                &--left,
+                &--right {
+                    width: calc(100% / 3.3);
+                    justify-content: space-between;
+
+                    i {
+                        display: none;
+                        visibility: hidden;
+                    }
+
+                    li {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
     @include bp.media-up("Small") {
         &-top {
             &__block {
@@ -430,6 +452,11 @@
                         visibility: hidden;
                     }
 
+                    i {
+                        display: block;
+                        visibility: visible;
+                    }
+
                     li {
                         justify-content: center;
                     }
@@ -440,6 +467,11 @@
 
                     li {
                         width: 100%;
+
+                        i {
+                            display: none;
+                            visibility: hidden;
+                        }
                     }
                 }
 
@@ -465,6 +497,7 @@
 
         &-bottom {
             &__logo {
+                width: initial;
                 height: var(--headerBottomHeight);
                 left: 25%;
 

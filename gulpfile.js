@@ -47,14 +47,14 @@ function buildStyles() {
                     compatibility: "ie8",
                 }),
             )
-            .pipe(
-                sourcemaps.write(".", {
-                    addComment: true,
-                    mapFile: function (mapFilePath) {
-                        return mapFilePath.replace(".scss", ".map");
-                    },
-                }),
-            )
+            // .pipe(
+            //     sourcemaps.write(".", {
+            //         addComment: true,
+            //         mapFile: function (mapFilePath) {
+            //             return mapFilePath.replace(".scss", ".map");
+            //         },
+            //     }),
+            // )
             .pipe(gulp.dest(path.dest.css))
     );
 }
