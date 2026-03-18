@@ -28,6 +28,7 @@
         min-height: 70vh;
         display: block;
         position: relative;
+        padding-top: calc(var(--headerTopHeight) + var(--headerBottomHeight) + var(--marginVert));
         z-index: 0;
     }
 
@@ -185,7 +186,7 @@
         }
 
         &_grid {
-            margin-top: calc(var(--marginVert) * 2);
+            margin-bottom: calc(var(--marginVert) * 2);
 
             &_link {
                 // width: calc(100% / 3);
@@ -306,4 +307,8 @@
 
 .text-right {
     text-align: right;
+}
+
+.list-unstyled {
+    margin-bottom: var(--marginVert);
 }
