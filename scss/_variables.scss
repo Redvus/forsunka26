@@ -54,6 +54,14 @@
     --borderThin: var(--border_thin) solid var(--productBorderColor);
 
     /*=====  End of Product  ======*/
+
+    /*============================
+    =            Cart            =
+    ============================*/
+    --cartProductsHeight: calc(var(--marginVert) * 30);
+    --cartTotalsHeight: calc(var(--marginVert) * 8.5);
+
+    /*=====  End of Cart  ======*/
 }
 
 @include bp.media-up("XXLarge") {
