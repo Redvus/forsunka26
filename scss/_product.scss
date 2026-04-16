@@ -156,4 +156,11 @@
             }
         }
     }
+
+    @include bp.media-up("Small") {
+
+        &__image {
+            width: 100%;
+        }
+    }
 }

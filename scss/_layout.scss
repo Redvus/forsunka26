@@ -271,7 +271,7 @@
 
     @include bp.media-up("Small") {
         &--main {
-            padding-top: calc(var(--marginVert) * 1);
+            padding-top: calc(var(--marginVert) * 6);
             overflow: hidden;
         }
 
